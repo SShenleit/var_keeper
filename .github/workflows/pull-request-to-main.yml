@@ -14,8 +14,7 @@ jobs:
         run: |
           chmod +x ./test/unit-tests.sh
           ./test/unit-tests.sh
-        
-jobs:
+
   integration_testing:
     runs-on: ubuntu-latest
     container: python:3.10.9-slim
