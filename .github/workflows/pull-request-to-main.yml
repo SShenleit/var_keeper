@@ -15,8 +15,9 @@ jobs:
           chmod +x ./test/unit-tests.sh
           ./test/unit-tests.sh
         
+jobs:
   integration_testing:
-     runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
     container: python:3.10.9-slim
     services:
       db:
@@ -26,7 +27,7 @@ jobs:
         options: >-
           --health-cmd "mysqladmin ping"
           --health-interval 10s
-          --health-timeout 5s
+          --health-timeout 5
           --health-retries 5
           
   mega_hard_testing:
